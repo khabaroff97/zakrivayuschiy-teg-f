@@ -26,3 +26,21 @@
   width: var(--page-width);
 }
 
+.header {
+  font-family: var(--accent-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  text-transform: uppercase;
+  outline: 2px solid var(--color);
+  padding-block: 128px;
+  margin-block: 103px;
+}
+
+.header_title{
+  font-size: var(--header-title-font-size);
+  font-weight: var(--text-weight);
+  
+}
