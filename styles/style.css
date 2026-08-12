@@ -13,5 +13,16 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: var(--background-image);
+  /*background-image: var(--background-image);*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
 }
+.header .main {
+  width: var(--page-width);
+}
+
