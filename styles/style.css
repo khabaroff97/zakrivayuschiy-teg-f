@@ -10,17 +10,24 @@
 
 */
 
+
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--main-font);
+font-family: var(--main-font);
+    font-variation-settings: "wght" var(--text-weight);
+    font-size: var(--font-size);
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+
+}
+.main, .header {
+  width: var(--page-width);
 }
 
 .header {
@@ -32,9 +39,9 @@
   background-color: var(--background-color);
   text-transform: uppercase;
   outline: 2px solid var(--color);
-  width: var(--page-width);
-  padding-block: 128px;
-  margin-block: 103px;
+  padding-block: 130px;
+  margin-block: 100px;
+  
 }
 
 .header_title {
@@ -43,39 +50,48 @@
   line-height: 100%;
   padding-bottom: 20px;
 }
-.header_sub {
+.title_sub {
   font-size: var(--header-subtitle-font-size);
-}
-.main {
-  display: grid;
-  margin-block-end: 100px;
-  justify-items: center;
-  gap: 50px;
-  width: var(--page-width);
+  text-transform: uppercase;
+  line-height: 100%;
+  font-weight: 400; 
 }
 
-.article {
-  outline: 2px solid var(--color);
-  width: 100%;
-  background-color: white;
-  margin-bottom: 54px;
-}
-
-.article:last-of-type {
-  margin-bottom: 52px;
-}
-
-.article_title {
-  padding: 5px 10px;
+.art_title {
+  padding: 4px 10px;
   font-variation-settings: "wght" var(--title-weight);
   color: var(--color);
   background-color: var(--background-color);
   font-size: var(--font-size);
 }
 
+
+.main {
+  display: grid;
+  margin-block-end: 100px;
+  justify-items: center;
+  gap: 50px;
+  max-inline-size: 696px;
+  
+}
+
+.article {
+  outline: 2px solid var(--color);
+  width: 100%;
+  background-color: white;
+  max-inline-size: 696px;
+}
+
 .art_image {
   position: relative;
-  margin: 0px 0px 5px 0px;
+  margin: 0px;
+}
+
+.image{
+  object-fit: cover;
+  object-position: right;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .card_label {
@@ -93,14 +109,22 @@
 }
 
 .article_info {
-  padding: 24px 24px 25px 26px;
+  padding: 25px;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
 }
 
+.article_text{
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  line-height: 21px;
+  font-weight: 410;
+  padding: 0;
+  
+}
 .article_text:not(:last-of-type) {
-  margin-block-end: 27px;
+  margin-block-end: 25px;
 }
 
 .article_text:last-of-type {
@@ -175,6 +199,7 @@
   font-size: var(--button-font-size);
   mix-blend-mode: difference;
   margin-right: 5px;
+  text-transform: uppercase;
 }
 
 .decorated_button::before {
@@ -259,51 +284,6 @@ body:has(.floppy_dialog[open]) {
   }
 }
 
-@media (width <= 375px) {
-  .main,
-  .header,
-  .footer {
-    width: 100%;
-  }
-
-  .header {
-    margin-top: 27vw;
-    margin-bottom: 28vw;
-    block-size: 325px;
-  }
-
-  .header_title {
-    line-height: 49px;
-    letter-spacing: normal;
-  }
-
-  .article_info {
-    padding: 20px 27px 25px 27px;
-  }
-
-  .card_label {
-    top: 20px;
-    right: 10px;
-  }
-
-  .save_button {
-    flex-direction: column;
-    width: 312px;
-    height: 84px;
-    margin: 0;
-    gap: 4px;
-  }
-
-  .floppy_svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .decorated_button_text {
-    margin-right: 2px;
-    margin-bottom: 4px;
-  }
-}
 .filter_opacity {
   filter: opacity(0.5);
 }
@@ -333,4 +313,30 @@ body:has(.floppy_dialog[open]) {
 
 .filter_multy {
   filter: drop-shadow(16px 16px 20px rgb(18, 12, 12)) invert(75%);
+}
+
+@media (width <= 375px) {
+  
+  .header {
+inline-size: 100%;
+
+  }
+
+  .save_button {
+    flex-direction: column;
+    width: 306px;
+    height: 84px;
+    margin: 0;
+    gap: 4px;
+  }
+
+  .floppy_svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .decorated_button_text {
+    margin-right: 2px;
+    margin-bottom: 4px;
+  }
 }
