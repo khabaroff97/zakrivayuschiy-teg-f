@@ -10,23 +10,21 @@
 
 */
 
-
 .page {
-font-family: var(--main-font);
-    font-variation-settings: "wght" var(--text-weight);
-    font-size: var(--font-size);
-    background-image: var(--background-image);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--text-weight);
+  font-size: var(--font-size);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.main, .header {
+.main,
+.header {
   width: var(--page-width);
 }
 
@@ -41,7 +39,6 @@ font-family: var(--main-font);
   outline: 2px solid var(--color);
   padding-block: 130px;
   margin-block: 100px;
-  
 }
 
 .header_title {
@@ -54,7 +51,7 @@ font-family: var(--main-font);
   font-size: var(--header-subtitle-font-size);
   text-transform: uppercase;
   line-height: 100%;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .art_title {
@@ -65,14 +62,12 @@ font-family: var(--main-font);
   font-size: var(--font-size);
 }
 
-
 .main {
   display: grid;
   margin-block-end: 100px;
   justify-items: center;
   gap: 50px;
   max-inline-size: 696px;
-  
 }
 
 .article {
@@ -87,7 +82,7 @@ font-family: var(--main-font);
   margin: 0px;
 }
 
-.image{
+.image {
   object-fit: cover;
   object-position: right;
   inline-size: 100%;
@@ -115,13 +110,12 @@ font-family: var(--main-font);
   flex-direction: column;
 }
 
-.article_text{
+.article_text {
   font-family: var(--main-font);
   font-size: var(--font-size);
   line-height: 21px;
   font-weight: 410;
   padding: 0;
-  
 }
 .article_text:not(:last-of-type) {
   margin-block-end: 25px;
@@ -315,11 +309,10 @@ body:has(.floppy_dialog[open]) {
   filter: drop-shadow(16px 16px 20px rgb(18, 12, 12)) invert(75%);
 }
 
-@media (width <= 375px) {
-  
+@media (width <= 376px) {
   .header {
-inline-size: 100%;
-
+    width: 100%;
+    min-height: 327px;
   }
 
   .save_button {
