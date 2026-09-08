@@ -6,9 +6,7 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
+✦ button__text — для обозначения текстового элемента внутри кнопки */
 
 .page {
   font-family: var(--main-font);
@@ -193,7 +191,6 @@
   font-size: var(--button-font-size);
   mix-blend-mode: difference;
   margin-right: 5px;
-  text-transform: uppercase;
 }
 
 .decorated_button::before {
